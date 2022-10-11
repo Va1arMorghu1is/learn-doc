@@ -129,8 +129,6 @@ coroutineScope.launch{}
 GlobalScope.launch { }
 ```
 
-
-
 3.在viewModel中使用协程需要指定Dispatchers,默认Dispatchers在主线程中运行，耗时操作报错
 
 ```kotlin
@@ -139,8 +137,6 @@ GlobalScope.launch { }
             list.addAll(all)
         }
 ```
-
-
 
 ##### Room
 
@@ -151,32 +147,10 @@ plugins {
     id 'kotlin-kapt'
 }   
    dependencies { // Room components
-    implementation "androidx.room:room-ktx:$rootProject.roomVersion"
-    kapt "androidx.room:room-compiler:$rootProject.roomVersion"
-    androidTestImplementation "androidx.room:room-testing:$rootProject.roomVersion"
-    }
+    def roomVersion = '2.4.3'
+    // Room components
+    implementation "androidx.room:room-ktx:$roomVersion"
+    kapt "androidx.room:room-compiler:$roomVersion"
+    androidTestImplementation "androidx.room:room-testing:$roomVersion"
+  }
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
