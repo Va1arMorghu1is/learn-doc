@@ -113,7 +113,7 @@ LazyColumn {
 
 ##### compose协程使用
 
-1.在@Composable方法的构造函数中初始化：
+1.在@Composable方法的参数中初始化：
 
 ```kotlin
 coroutineScope: CoroutineScope= rememberCoroutineScope()
